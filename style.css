@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    margin-bottom: 12px;
+    color: #333;
+    font-size: 18px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Trường hợp 1: grid-row: 1 / 3 */
+.ex1 .item1 {
+    grid-row: 1 / 3;
+    background-color: #ffadad;
+}
+
+/* Trường hợp 2: grid-row: 2 / 4 */
+.ex2 .item1 {
+    grid-row: 2 / 4;
+    background-color: #ffd6a5;
+}
+
+/* Trường hợp 3: grid-row: span 2 */
+.ex3 .item1 {
+    grid-row: span 2;
+    background-color: #caffbf;
+}
